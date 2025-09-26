@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://j0xc6l5fs8wb"]
+
+[ext_resource type="Script" uid="uid://dxnd10tcph1js" path="res://scripts/obstacle.gd" id="1_7ukg5"]
+
+[node name="obstacle" type="Area2D"]
+scale = Vector2(0.6, 0.6)
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_7ukg5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -122.0
+offset_top = -20.0
+offset_right = -82.0
+offset_bottom = 20.0
+color = Color(1, 1, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 83.0
+offset_top = -20.0
+offset_right = 123.0
+offset_bottom = 20.0
+color = Color(1, 1, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -82.0
+offset_top = -8.0
+offset_right = 83.0
+offset_bottom = 9.0
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-122, -20, -82, -20, -82, -8, 83, -8, 83, -20, 123, -20, 123, 20, 82, 20, 82, 9, -82, 9, -82, 20, -123, 20)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
