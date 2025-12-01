@@ -24,6 +24,10 @@ window/size/viewport_height=500
 
 enabled=PackedStringArray("res://addons/random_timer/plugin.cfg")
 
+[global_group]
+
+obstacles=""
+
 [input]
 
 up={
